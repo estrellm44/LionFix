@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Student Dashboard | LionFix</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="requests.js" defer></script>
+        <script src="student-dashboard.js" defer></script>
+    </head>
+
+    <body>
+        <header class="website-header">
+            <a href="index.html" class="logo" aria-label="LionFix home">LF</a>
+    
+            <div class="app-name">
+                <p class="site-name">LionFix</p>
+                <p>Campus Issue Portal</p>
+            </div>
+    
+            <button type="button" aria-label="Notifications">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    aria-hidden="true"
+                >
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                    <path d="M10 21h4"/>
+                </svg>
+            </button>
+        </header>
+    
+        <nav class="main-navigation">
+            <a href="index.html" aria-current="page">Student</a>
+            <a href="report-issue.html">Report Issue</a>
+            <a href="staff.html">Staff</a>
+            <a href="administrator.html">Administrator</a>
+        </nav>
+
+        <main class="student-page">
+            <p class="heading-label">Student portal</p>
+
+            <p id="greeting"></p>
+            <p>View submitted issues, follow updates, or report a new campus concern.</p>
+            
+            <a href="report-issue.html">Report an issue</a>
+
+            <section class="my requests">
+                <h2>My Submitted Issues</h2>
+                <p>Select an issue to view progress</p>
+
+                <p id="requests-empty">No submitted requests</p>
+
+                <ul id="requests-list" hidden></ul>
+
+                <div id="requests-pagination" hidden>
+                    <button type="button" id="previous-page">Previous</button>
+                    <span id="page-number"></span>
+                    <button type="button" id="next-page">Next</button>
+                </div>
+            </section>
+
+            <section class="my notifications">
+
+            </section>
+
+            
+        </main>
+    
+    </body>
+</html>

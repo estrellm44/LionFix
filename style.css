@@ -1,0 +1,264 @@
+/* Website header */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3ef;
+    color: #1a1a1a;
+}
+
+.website-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background-color: white;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1a1a1a;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.app-name p{
+    margin: 0;
+}
+
+.site-name{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+
+.app-name p:last-child {
+    margin-top: 4px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.website-header button {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: white;
+    color: #1a1a1a;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.website-header button svg {
+    position: relative;
+    top: 1px;
+}
+
+/* Website navigation */
+/* Arrange navigation links in a row */
+.main-navigation {
+    display: flex;
+    background-color: #deddd8;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* Style each navigation link */
+.main-navigation a {
+    flex: 1;
+    padding: 18px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #1a1a1a;
+    border-right: 1px solid #aaa;
+    transition: background-color 0.2s;
+}
+
+/* Remove the border at the far right */
+.main-navigation a:last-child {
+    border-right: none;
+}
+
+/* Highlight the current page */
+.main-navigation a[aria-current="page"] {
+    background-color: #1a1a1a;
+    color: white;
+    font-weight: bold;
+}
+
+/* Brighten navigation links when hovered */
+.main-navigation a:hover {
+    background-color: #eeede8;
+}
+
+/* Brighten the active link while keeping its white text */
+.main-navigation a[aria-current="page"]:hover {
+    background-color: #333;
+}
+
+.report-page,
+.student-page
+{
+    max-width: 768px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.heading-label {
+    margin: 0 0 8px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.report-page h1,
+.student-page h1{
+    margin: 0 0 28px;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.submission-form {
+    background-color: white;
+    border: 2px solid #1a1a1a;
+}
+
+.submission-form h2 {
+    margin: 0;
+    padding: 22px 20px;
+    font-size: 16px;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.form-field {
+    margin: 24px 28px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #1a1a1a;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.form-field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-field input[type="file"] {
+    padding: 28px 12px;
+    border: 1px dashed #888;
+    background-color: #f3f3ef;
+}
+
+.form-field input[type="file"]::file-selector-button {
+    padding: 10px 16px;
+    margin-right: 12px;
+    background-color: white;
+    border: 1px solid #1a1a1a;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.form-action {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 20px;
+    background-color: #f3f3ef;
+    border-top: 1px solid #aaa;
+}
+
+.form-action button {
+    padding: 10px 20px;
+    border: 1px solid #1a1a1a;
+    background-color: white;
+    color: #1a1a1a;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-action button[type="submit"] {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#greeting {
+    margin: 0 0 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#requests-list li{
+    white-space: pre-line;
+}
+
+
+
+
+
+
+
+
+
+.dashboard-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #062143;
+}
+
+.issue-heading {
+    background-color: transparent;
+    padding: 20px;
+    color: #062143;
+}
+
+.issue-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+.student-page .issue-heading h1 {
+    margin: 0;
+}
+
+.issue-status {
+    padding: 10px 18px;
+    border: 2px solid #062143;
+    background: repeating-linear-gradient(
+        135deg, white 0 8px, #dce8f4 8px 11px
+    );
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

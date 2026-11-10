@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Request Details | LionFix</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="requests.js" defer></script>
+        <script src="request-details.js" defer></script>
+    </head>
+
+    <body>
+        <header class="website-header">
+            <a href="index.html" class="logo" aria-label="LionFix home">LF</a>
+    
+            <div class="app-name">
+                <p class="site-name">LionFix</p>
+                <p>Campus Issue Portal</p>
+            </div>
+    
+            <button type="button" aria-label="Notifications">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    aria-hidden="true"
+                >
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                    <path d="M10 21h4"/>
+                </svg>
+            </button>
+        </header>
+    
+        <nav class="main-navigation">
+            <a href="index.html">Student</a>
+            <a href="report-issue.html">Report Issue</a>
+            <a href="staff.html">Staff</a>
+            <a href="administrator.html" >Administrator</a>
+        </nav>
+
+        <main class="student-page">
+            <a class="dashboard-back" href="index.html">← Back to dashboard</a>
+        
+            <p id="request-not-found" hidden>Request not found.</p>
+        
+            <div id="request-details" hidden>
+                <header class="issue-heading">
+                    <p class="heading-label">Issue LF-<span id="detail-id"></span></p>
+        
+                    <div class="issue-heading-row">
+                        <h1 id="detail-description"></h1>
+                        <span id="detail-status" class="issue-status"></span>
+                    </div>
+                </header>
+        
+                <p>Location: <span id="detail-location"></span></p>
+            </div>
+        </main>
+    </body>
+</html>

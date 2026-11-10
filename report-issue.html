@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Issue | LionFix</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="website-header">
+        <a href="index.html" class="logo" aria-label="LionFix home">LF</a>
+
+        <div class="app-name">
+            <p class="site-name">LionFix</p>
+            <p>Campus Issue Portal</p>
+        </div>
+
+        <button type="button" aria-label="Notifications">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+            >
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                <path d="M10 21h4"/>
+            </svg>
+        </button>
+    </header>
+
+    <nav class="main-navigation">
+        <a href="index.html">Student</a>
+        <a href="report-issue.html" aria-current="page">Report Issue</a>
+        <a href="staff.html">Staff</a>
+        <a href="administrator.html">Administrator</a>
+    </nav>
+
+    <main class="report-page">
+        <p class="heading-label">New Submission</p>
+
+        <h1>Report an issue</h1>
+
+        <form class="submission-form">
+            <h2>Issue information</h2>
+
+            <div class="form-field">
+                <label for="description">Description</label>
+                <input
+                    type="text"
+                    id="description"
+                    name="description"
+                    placeholder="Briefly describe the issue"
+                    required
+                >
+            </div>
+
+            <!--
+            FIXME: Need to ask if these details should be assigned
+            or if students should put what they think. -->
+
+            <div class="form-field">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select category</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="technology">Technology</option>
+                    <option value="safety">Safety</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+
+            <div class="form-field">
+                <label for="campus">Campus</label>
+                <select id="campus" name="campus" required>
+                    <option value="" disabled selected>Select campus</option>
+                    <option value="main-campus">Main Campus</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="building">Building</label>
+                <input
+                    type="text"
+                    id="building"
+                    name="building"
+                    placeholder="Building name"
+                    required
+                >
+            </div>
+
+            <div class="form-field">
+                <label for="location">Specific location</label>
+                <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="Floor, room, or nearby landmark"
+                    required
+                >
+            </div>
+
+            <div class="form-field">
+                <label for="time-observed">Time Observed</label>
+                <input
+                    type="datetime-local"
+                    id="time-observed"
+                    name="time-observed"
+                    required
+                >
+            </div>
+
+            <div class="form-field">
+                <label for="additional-comments">
+                    Additional comments (optional)
+                </label>
+                <textarea
+                    id="additional-comments"
+                    name="additional-comments"
+                    placeholder="Add any details the staff may need to resolve the issue"
+                    rows="4"
+                ></textarea>
+            </div>
+
+            <div class="form-field">
+                <label for="photo">Photo (optional)</label>
+                <input
+                    type="file"
+                    id="photo"
+                    name="photo"
+                    accept="image/jpeg,image/png"
+                >
+            </div>
+
+            <div class="form-action">
+                <button type="button">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>
