@@ -47,18 +47,57 @@
             <a class="dashboard-back" href="index.html">← Back to dashboard</a>
         
             <p id="request-not-found" hidden>Request not found.</p>
-        
+
             <div id="request-details" hidden>
                 <header class="issue-heading">
                     <p class="heading-label">Issue LF-<span id="detail-id"></span></p>
-        
+            
                     <div class="issue-heading-row">
                         <h1 id="detail-description"></h1>
                         <span id="detail-status" class="issue-status"></span>
                     </div>
                 </header>
-        
-                <p>Location: <span id="detail-location"></span></p>
+            
+                <section class="issue-details-card">
+                    <h2>Issue details</h2>
+            
+                    <dl class="issue-details-grid">
+                        <div>
+                            <dt>Category</dt>
+                            <dd id="detail-category"></dd>
+                        </div>
+            
+                        <div>
+                            <dt>Location</dt>
+                            <dd id="detail-location"></dd>
+                        </div>
+            
+                        <div>
+                            <dt>Time observed</dt>
+                            <dd id="detail-observed"></dd>
+                        </div>
+            
+                        <div>
+                            <dt>Last update</dt>
+                            <dd id="detail-last-update"></dd>
+                        </div>
+            
+                        <div class="issue-details-description">
+                            <dt>Additional comments</dt>
+                            <dd id="detail-comments"></dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section class="issue-details-card">
+                    <h2>Status progress</h2>
+
+                    <ol id="status-progress" class="status-progress"></ol>
+                </section>
+
+                <section class="issue-details-card">
+                    <h2>Update and messages</h2>
+                </section>
             </div>
         </main>
     </body>

@@ -262,3 +262,147 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+/* Issue details card and heading */
+.issue-details-card {
+    margin-top: 24px;
+    background-color: white;
+    color: #062143;
+    border: 2px solid #062143;
+}
+
+.issue-details-card h2 {
+    margin: 0;
+    padding: 20px;
+    border-bottom: 2px solid #062143;
+    font-size: 18px;
+}
+
+/* Two equal columns for the issue details */
+.issue-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 20px;
+}
+
+.issue-details-grid dt {
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.issue-details-grid dd {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Let the description span both columns */
+.issue-details-description {
+    grid-column: 1 / -1;
+}
+
+.issue-details-description dd {
+    color: #40546a;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+/* Stack the fields on narrow screens */
+@media (max-width: 540px) {
+    .issue-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Default: outlined badge with no fill */
+.issue-status {
+    padding: 10px 18px;
+    border: 2px solid #062143;
+    background: transparent;
+    color: #062143;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Add diagonal stripes only while work is in progress */
+.issue-status[data-status="In Progress"] {
+    background: repeating-linear-gradient(
+        135deg, transparent 0 8px, #dce8f4 8px 11px
+    );
+}
+
+/* Fill the badge when the issue is closed */
+.issue-status[data-status="Closed"] {
+    background: #062143;
+    color: white;
+}
+
+/* Remove the list's default numbers and add inner spacing */
+.status-progress {
+    list-style: none;
+    margin: 0;
+    padding: 24px;
+}
+
+/* Place each marker beside its status text */
+.status-progress li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 28px;
+}
+
+.status-progress li:last-child {
+    padding-bottom: 0;
+}
+
+/* Keep the caption close to the status name */
+.status-progress p {
+    margin: 6px 0 0;
+    color: #526780;
+    font-size: 14px;
+}
+
+/* Give every marker a circular outline */
+.status-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 2px solid #062143;
+    border-radius: 50%;
+    background-color: white;
+    color: #062143;
+    font-weight: bold;
+}
+
+/* Fill completed and current steps */
+.status-progress .is-complete .status-marker,
+.status-progress .is-current .status-marker {
+    background-color: #22477f;
+    color: white;
+}
+
+/* Position each connecting line relative to its step */
+.status-progress li {
+    position: relative;
+}
+
+/* Connect each circle to the next one */
+.status-progress li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    bottom: 0;
+    width: 2px;
+    background-color: #22477f;
+}

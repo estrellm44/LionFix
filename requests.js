@@ -8,7 +8,7 @@ const requests = [
         campus: "Main campus",
         building: "Library",
         specific_location: "Front Entrance",
-        status: "Pending",
+        status: "Submitted",
         createdTime: "2026-11-01"
     },
 
@@ -19,7 +19,7 @@ const requests = [
         campus: "Main campus",
         building: "Library",
         specific_location: "Front Entrance",
-        status: "Pending",
+        status: "Assigned",
         createdTime: "2026-11-02"
     },
 
@@ -41,7 +41,7 @@ const requests = [
         campus: "Main campus",
         building: "Library",
         specific_location: "Front Entrance",
-        status: "Pending", 
+        status: "In Progress", 
         createdTime: "2026-01-01"
     },
 
@@ -52,8 +52,10 @@ const requests = [
         campus: "Main campus",
         building: "Library",
         specific_location: "Front Entrance",
-        status: "Completed",
-        createdTime: "2026-09-10"
+        status: "Closed",
+        createdTime: "2026-09-10",
+        observedTime: "Nov 1, 2026, 3:15 PM",
+        additionalComments: "The light above the library’s front entrance is out."
     },
  
 ];

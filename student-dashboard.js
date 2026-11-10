@@ -75,8 +75,8 @@ function displayRequests() {
 
 // Put completed requests last, then sort each group newest first
 requests.sort(function (a, b) {
-    const aCompleted = a.status === "Completed";
-    const bCompleted = b.status === "Completed";
+    const aCompleted = a.status === "Closed";
+    const bCompleted = b.status === "Closed";
 
     if (aCompleted && !bCompleted) {
         return 1;
