@@ -97,6 +97,21 @@
 
                 <section class="issue-details-card">
                     <h2>Update and messages</h2>
+
+                    <div class="issue-messages">
+                        <p id="messages-empty">No updates or messages</p>
+                        <ul id="messages-list" hidden></ul>
+
+                        <details id="reply-dropdown" hidden>
+                            <form id="reply-form">
+                                <label for="reply-message">Your reply</label>
+                                <textarea name="reply-message" id="reply-message" rows="4" placeholder="Provide requested details" required></textarea>
+    
+                                <button type="submit">Reply</button>
+                            </form>
+                        </details>
+                        
+                    </div>
                 </section>
             </div>
         </main>

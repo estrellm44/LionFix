@@ -42,7 +42,33 @@ const requests = [
         building: "Library",
         specific_location: "Front Entrance",
         status: "In Progress", 
-        createdTime: "2026-01-01"
+        createdTime: "2026-01-01",
+        additionalComments: "The light above the library’s front entrance is out.",
+
+        messages: [
+            {
+                type: "inquiry",
+                author: "Facilities staff",
+                text: "Which entrance has the broken light?",
+                postedAt: "2026-11-12T14:30:00",
+                needsReply: true,
+                replies: []
+            },
+
+            {
+                type: "update",
+                author: "Facilities staff",
+                text: "A technician has been assigned and will check the light tomorrow morning.",
+                postedAt: "2026-12-12T14:30:00"
+            },
+
+            {
+                type: "update",
+                author: "Facilities staff",
+                text: "Fixed entrance light.",
+                postedAt: "2026-13-12T14:30:00"
+            }
+        ],
     },
 
     {
